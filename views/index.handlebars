@@ -1,0 +1,100 @@
+<!-- ./views/index.handlebars -->
+<div class="container mt-5">
+
+
+
+  {{#each numbers}}
+  <span>---</span>
+  <div class="d-inline-flex align-items-center justify-content-center bg-info text-white rounded-circle my-4"
+    style="width: 30px; height: 30px;">
+    {{this}}
+  </div>
+  <span>---</span>
+  {{/each}}
+
+
+
+  <!-- movie list -->
+  <div class="row" id="data-panel">
+
+
+
+
+
+
+
+    <div class="row" id="data-panel">
+
+
+
+      <div class="col-md-4">
+        <a href="/movies/1" class="text-secondary">
+          <div class="card mb-2">
+            <img class="card-img-top"
+              src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+              alt="Card image cap">
+
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/movies/2" class="text-secondary">
+          <div class="card mb-2">
+            <img class="card-img-top"
+              src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+              alt="Card image cap">
+
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/movies/3" class="text-secondary">
+          <div class="card mb-2">
+            <img class="card-img-top"
+              src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+              alt="Card image cap">
+
+          </div>
+        </a>
+      </div>
+
+
+
+
+      <form method="POST" action="/">
+        <label class="radios">
+          <input type="radio" name="target" checked value="engineer" {{engineer_chk}}>工程師
+        </label>
+        <label class="radios">
+          <input type="radio" name="target" value="designer" {{designer_chk}}>設計師
+        </label>
+        <label class="radios">
+          <input type="radio" name="target" value="entrepreneur" {{entrepreneur_chk}}>創業家
+        </label>
+        <input type="submit" value="產生幹話">
+      </form>
+
+
+    </div>
+
+
+
+    <div class="col-md-12" style="margin-top: 20px;">
+
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            {{ trash_talk }}
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+
+  </div>
+</div>
